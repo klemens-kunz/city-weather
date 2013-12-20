@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.css" media="screen"></link>
+	</head>
+	<body>
+		<header>
+			<img src="img/logo.png" class="logo" />
+			<div class="social">
+				<a class="facebook" href="#"></a>
+				<a class="twitter" href="#"></a>
+				<a class="google" href="#"></a>
+				<a class="bookmark" href="#"></a>
+			</div>
+			<div class="clearfix"></div>
+		</header>
+		<section class="main">
+			<select class="sel-city">
+				<option value="02112">Boston</option>
+				<option value="10001">New York</option>
+				<option value="19122">Philadelphia</option>
+				<option value="20001">Washington D.C.</option>
+				<option value="30301">Atlanta</option>
+				<option value="33133">Miami</option>
+				<option value="75201">Dallas</option>
+				<option value="60601">Chicago</option>
+				<option value="63101">St. Louis</option>
+				<option value="80218">Denver</option>
+				<option value="89101">Las Vegas</option>
+				<option value="85001">Phoenix</option>
+				<option value="90001">Los Angeles</option>
+				<option value="94102">San Francisco</option>
+				<option value="98101">Seattle</option>
+			</select>
+
+			<div class="forecast-box today clearfix">
+				<p>
+					<span>currently in</span>
+					<span id="city-name" class="text-bold">New York</span>
+				</p>
+
+				<div class="forecast-icon current mostly-sunny text-bold">Mostly Sunny</div>
+
+				<div class="conditions">
+					<p class="text-bold" id="temp-now">
+						Temp: <span></span>
+					</p>
+					<p class="text-bold" id="temp-high">
+						High: <span></span>
+					</p>
+					<p class="text-bold" id="temp-low">
+						Low: <span></span>
+					</p>
+					<div class="forecast-icon mostly-sunny text-bold">Forecast:</div>
+				</div>
+			</div>
+
+			<div class="forecast-box tomorrow">
+				<p>
+					Forecast for tomorrow, <span class="date"></span>
+				</p>
+
+				<div class="forecast-icon tomorrow heavy-snow"></div>
+
+				<div class="conditions">
+					<p class="text-bold" id="condition">
+						Heavy snow
+					</p>
+					<p class="text-bold" id="temp-high">
+						High: <span></span>
+					</p>
+					<p class="text-bold" id="temp-low">
+						Low: <span></span>
+					</p>
+				</div>
+			</div>
+
+			<div class="forecast-boxes clearfix">
+				<div>
+					<p class="date"></p>
+					<div class="forecast-icon" class="mostly-cloudy"></div>
+					<div class="conditions">
+						<p class="text-bold" id="condition">
+							Heavy snow
+						</p>
+						<p class="text-bold" id="temp-high">
+							High: <span></span>
+						</p>
+						<p class="text-bold" id="temp-low">
+							Low: <span></span>
+						</p>
+					</div>
+				</div>
+				<div>
+					<p class="date"></p>
+					<div class="forecast-icon" class="mostly-cloudy"></div>
+					<div class="conditions">
+						<p class="text-bold" id="condition">
+							Heavy snow
+						</p>
+						<p class="text-bold" id="temp-high">
+							High: <span></span>
+						</p>
+						<p class="text-bold" id="temp-low">
+							Low: <span></span>
+						</p>
+					</div>
+				</div>
+				<div>
+					<p class="date"></p>
+					<div class="forecast-icon" class="mostly-cloudy"></div>
+					<div class="conditions">
+						<p class="text-bold" id="condition">
+							Heavy snow
+						</p>
+						<p class="text-bold" id="temp-high">
+							High: <span></span>
+						</p>
+						<p class="text-bold" id="temp-low">
+							Low: <span></span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+		</section>
+	</body>
+</html>
