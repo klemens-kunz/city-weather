@@ -25,6 +25,7 @@ p{
 
 header{
 	width: 100%;
+	max-width: 1024px;
 	border-radius: 0 0 20px 20px;
 	background: #87b7f2; /* Old browsers */
 	background: -moz-linear-gradient(top,  #eef5fd 0%, #87b7f2 100%); /* FF3.6+ */
@@ -79,6 +80,7 @@ header .social .bookmark{
 
 section.main{
 	width: 100%;
+	max-width: 1024px;
 	border-radius: 20px 20px 0 0;
 	background: #87b7f2; /* Old browsers */
 	background: -moz-linear-gradient(top,  #87b7f2 0%, #ffffff 100%); /* FF3.6+ */
@@ -96,9 +98,28 @@ section.main{
 	-webkit-box-sizing: border-box;
 }
 
-.sel-city{
+#sel-city{
 	display: block;
+	float: left;
 }
+
+section.main label{
+	float: left;
+	font-size: .8em;
+	margin-right: 5px;
+}
+
+section.main .unit{
+	font-weight: bold;
+	color: #FFF;
+	cursor: pointer;
+}
+
+section.main .unit.active{
+	color: #363a98;
+}
+
+/*Forecast boxes general*/
 
 .forecast-box, .forecast-boxes > div{
 	background: #fff;
@@ -115,6 +136,7 @@ section.main{
 .forecast-box.today, .forecast-box.tomorrow{
 	width: 49%;
 	float: left;
+	min-width: 280px;
 }
 
 .forecast-box.today{
@@ -128,4 +150,149 @@ section.main{
 
 .forecast-boxes > div:first-child, .forecast-boxes > div:nth-child(2){
 	margin-right: 2%;
-} 
+}
+
+.forecast-icon{
+	background: transparent url(../img/weather-icons.svg) 0 0 no-repeat scroll;
+}
+
+/*Today's weather box*/
+
+.forecast-box.today > p{
+	float: left;
+	width: 25%;
+}
+
+.forecast-box.today > p span{
+	display: block;
+	margin-bottom: 30%;
+}
+
+.forecast-box.today .current-condition{
+	float: left;
+	width: 40%;
+	text-align: center;
+}
+
+.forecast-box.today .forecast-icon.current{
+	background-size: 1500%;
+	width: 75%;
+	padding: 60% 12.5% 0;
+}
+
+.forecast-box.today .conditions{
+	float: left;
+	width: 25%;
+}
+
+.forecast-box.today .conditions .forecast-icon{
+	background-size: 1050%;
+	width: 100%;
+	padding-bottom: 50%;
+}
+
+#city-name{
+	font-size: 100%;
+}
+
+/* Tomorrow's weather box */
+
+.forecast-icon.tomorrow{
+	background-size: 1130%;
+	width: 30%;
+	float: left;
+	padding: 12.5% 12.5% 9% 12.5%;
+	margin-top: 20px;
+}
+
+.forecast-box.tomorrow .conditions{
+	float: left;
+	margin-top: 20px;
+}
+
+/* bottom forecast boxes */
+.forecast-boxes .forecast-icon{
+	background-size: 1110%;
+	width: 30%;
+	float: left;
+	padding: 12.5% 12.5% 9% 12.5%;
+	margin-top: 10px;
+}
+
+.forecast-boxes .conditions{
+	float: left;
+	width: 45%;
+}
+
+/* bottom boxes on mobile */
+@media screen and (max-width: 640px){
+	body {font-size: .8em;}
+
+
+	.forecast-boxes .forecast-icon {
+		width: 80%;
+		padding: 12.5% 12.5% 30% 12.5%;
+	}
+
+}
+
+/*weather-icon positioning*/
+.forecast-icon.sunny{
+	background-position: -2% 75%;
+}
+
+.forecast-icon.partly-cloudy{
+	background-position: 5.5% 75%;
+}
+
+.forecast-icon.chance-of-storm{
+	background-position: 13% 75%;
+}
+
+.forecast-icon.chance-of-rain{
+	background-position: 21% 75%;
+}
+
+.forecast-icon.heavy-rain{
+	background-position: 28.5% 75%;
+}
+
+.forecast-icon.windy{
+	background-position: 36% 75%;
+}
+
+.forecast-icon.windy-rain{
+	background-position: 44% 75%;
+}
+
+.forecast-icon.chance-of-snow{
+	background-position: 50.5% 75%;
+}
+
+.forecast-icon.heavy-snow{
+	background-position: 58% 75%;
+}
+
+.forecast-icon.hail{
+	background-position: 66% 75%;
+}
+
+.forecast-icon.mostly-cloudy{
+	background-position: 73.5% 75%;
+}
+
+.forecast-icon.thunderstorm{
+	background-position: 81.5% 75%;
+}
+
+.forecast-icon.fog{
+	background-position: 88.5% 75%;
+}
+
+.forecast-icon.cold{
+	background-position: 95% 75%;
+}
+
+.forecast-icon.not-available{
+	background-position: 102% 75%;
+}

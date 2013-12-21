@@ -1,21 +1,28 @@
 <!doctype html>
 <html>
 	<head>
+		<title>city-weather.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<link rel="stylesheet" href="css/style.css" media="screen"></link>
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
 		<header>
 			<img src="img/logo.png" class="logo" />
 			<div class="social">
-				<a class="facebook" href="#"></a>
-				<a class="twitter" href="#"></a>
-				<a class="google" href="#"></a>
-				<a class="bookmark" href="#"></a>
+				<a class="facebook" target="_blank" href=""></a>
+				<a class="twitter" target="_blank" href=""></a>
+				<a class="google" target="_blank" href=""></a>
+				<a class="bookmark" href=""></a>
 			</div>
 			<div class="clearfix"></div>
 		</header>
 		<section class="main">
-			<select class="sel-city">
+			<label>Please choose a city:</label>
+			<select id="sel-city">
 				<option value="02112">Boston</option>
 				<option value="10001">New York</option>
 				<option value="19122">Philadelphia</option>
@@ -32,26 +39,30 @@
 				<option value="94102">San Francisco</option>
 				<option value="98101">Seattle</option>
 			</select>
+			<a class="unit active" data-unit="fahrenheit">&deg;F</a> / <a class="unit" data-unit="celsius">&deg;C</a>
 
 			<div class="forecast-box today clearfix">
 				<p>
 					<span>currently in</span>
-					<span id="city-name" class="text-bold">New York</span>
+					<span id="city-name" class="text-bold"></span>
 				</p>
 
-				<div class="forecast-icon current mostly-sunny text-bold">Mostly Sunny</div>
+				<div class="current-condition">
+					<div class="forecast-icon current"></div>
+					<div class="text-bold"></div>
+				</div>
 
 				<div class="conditions">
-					<p class="text-bold" id="temp-now">
-						Temp: <span></span>
+					<p class="text-bold temp-now">
+						Temp: <span></span><span class="entity">&deg;F</span>
 					</p>
-					<p class="text-bold" id="temp-high">
-						High: <span></span>
+					<p class="text-bold temp-high">
+						High: <span></span><span class="entity">&deg;F</span>
 					</p>
-					<p class="text-bold" id="temp-low">
-						Low: <span></span>
+					<p class="text-bold temp-low">
+						Low: <span></span><span class="entity">&deg;F</span>
 					</p>
-					<div class="forecast-icon mostly-sunny text-bold">Forecast:</div>
+					<div class="forecast-icon text-bold">Forecast:</div>
 				</div>
 			</div>
 
@@ -60,17 +71,15 @@
 					Forecast for tomorrow, <span class="date"></span>
 				</p>
 
-				<div class="forecast-icon tomorrow heavy-snow"></div>
+				<div class="forecast-icon tomorrow"></div>
 
 				<div class="conditions">
-					<p class="text-bold" id="condition">
-						Heavy snow
+					<p class="text-bold condition"></p>
+					<p class="text-bold temp-high">
+						High: <span></span><span class="entity">&deg;F</span>
 					</p>
-					<p class="text-bold" id="temp-high">
-						High: <span></span>
-					</p>
-					<p class="text-bold" id="temp-low">
-						Low: <span></span>
+					<p class="text-bold temp-low">
+						Low: <span></span><span class="entity">&deg;F</span>
 					</p>
 				</div>
 			</div>
@@ -78,46 +87,40 @@
 			<div class="forecast-boxes clearfix">
 				<div>
 					<p class="date"></p>
-					<div class="forecast-icon" class="mostly-cloudy"></div>
+					<div class="forecast-icon"></div>
 					<div class="conditions">
-						<p class="text-bold" id="condition">
-							Heavy snow
+						<p class="text-bold condition"></p>
+						<p class="text-bold temp-high">
+							High: <span></span><span class="entity">&deg;F</span>
 						</p>
-						<p class="text-bold" id="temp-high">
-							High: <span></span>
-						</p>
-						<p class="text-bold" id="temp-low">
-							Low: <span></span>
+						<p class="text-bold temp-low">
+							Low: <span></span><span class="entity">&deg;F</span>
 						</p>
 					</div>
 				</div>
 				<div>
 					<p class="date"></p>
-					<div class="forecast-icon" class="mostly-cloudy"></div>
+					<div class="forecast-icon"></div>
 					<div class="conditions">
-						<p class="text-bold" id="condition">
-							Heavy snow
+						<p class="text-bold condition"></p>
+						<p class="text-bold temp-high">
+							High: <span></span><span class="entity">&deg;F</span>
 						</p>
-						<p class="text-bold" id="temp-high">
-							High: <span></span>
-						</p>
-						<p class="text-bold" id="temp-low">
-							Low: <span></span>
+						<p class="text-bold temp-low">
+							Low: <span></span><span class="entity">&deg;F</span>
 						</p>
 					</div>
 				</div>
 				<div>
 					<p class="date"></p>
-					<div class="forecast-icon" class="mostly-cloudy"></div>
+					<div class="forecast-icon mostly-cloudy"></div>
 					<div class="conditions">
-						<p class="text-bold" id="condition">
-							Heavy snow
+						<p class="text-bold condition"></p>
+						<p class="text-bold temp-high">
+							High: <span></span><span class="entity">&deg;F</span>
 						</p>
-						<p class="text-bold" id="temp-high">
-							High: <span></span>
-						</p>
-						<p class="text-bold" id="temp-low">
-							Low: <span></span>
+						<p class="text-bold temp-low">
+							Low: <span></span><span class="entity">&deg;F</span>
 						</p>
 					</div>
 				</div>
